@@ -1,0 +1,34 @@
+To upgrade node
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+
+sudo ln -sf /usr/local/n/versions/node/<VERSION>/bin/node /usr/bin/node 
+
+React Native
+
+	Its a javascript framework for creating native apps using React. Once learn can be used for all platforms. Native componnets are there for all platforms for its look and feel. The background native thread and the js are executed asynchronously. So we can use chrome developer tool bar for debugging. All kinds of options in a web  app can be used here also. Like flexbox, styling touch handling etc. There are so many pollifills to full fill the development. Its possible to extent existing components.
+
+Getting started
+
+	Node 5 or greater, npm 2
+	npm install -g react-native-cli - to do react-native commands through command line.This should be done once.
+	react-native init AwesomeProject: Create a new project with both xcode and gradle project.
+	react-native run- android - will start a node server, which helps to see each updates in the project.
+
+	Update
+To run with local server, run the following commands under your react-native project root directory
+react-native start > /dev/null 2>&1 &
+adb reverse tcp:8081 tcp:8081
+please take a look at dsissitka's answer for more details.
+
+To run without a server, bundle the jsfile into the apk by running:
+To bundle JS file into your apk while having your server running (react-native start) download bundle into assets directory of your app:
+
+curl "http://localhost:8081/index.android.bundle?platform=android" -o "android/app/src/main/assets/index.android.bundle"
+With the next release (0.12) we'll fix react-native bundle command to work with android projects as expected.
+
+gedit ~/.profile - to add android envt var name
+
+https://github.com/facebook/react-native/issues
+	
